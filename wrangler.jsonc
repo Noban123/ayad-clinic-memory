@@ -5,7 +5,7 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 "name": "ayad-clinic-bot",
-	"main": "src/index.ts",
+	"main": "worker.js",
 	"compatibility_date": "2025-04-30",
 	"observability": {
 		"enabled": true
