@@ -1,4 +1,4 @@
-const CLINIC_INFO = {
+٦const CLINIC_INFO = {
 projectName: 'Ayad Clinic AI',
 clinicName: 'Ayad Clinic',
 doctorName: 'د. محمد عياد',
