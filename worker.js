@@ -295,19 +295,25 @@ logError('processFacebookCommentEvent (inner)', err);
 توليد رد راقٍ على تعليق عام في فيسبوك (بدون طلب أي بيانات شخصية)
 */
 async function generateCommentReply(commentText, env) {
-const fallback = `شكرًا لتواصلكم مع ${CLINIC_INFO.clinicName} 🌿
+  const fallback = `شكرًا لتواصلكم مع ${CLINIC_INFO.clinicName} 🌿
 يسعدنا تواصلكم معنا عبر الرسائل الخاصة (Messenger) لمساعدتكم بكل التفاصيل التي تحتاجونها.`;
 
-const systemPrompt = buildCommentSystemPrompt();
+  const systemPrompt = buildCommentSystemPrompt();
 
-const aiReply = await callOpenAI({
-env,
-systemPrompt,
-messages: [{ role: 'user', content: commentText || 'تعليق عام على المنشور' }],
-maxTokens: 200,
-});
+  const aiReply = await callOpenAI({
+    env,
+    systemPrompt,
+    messages: [
+      {
+        role: "user",
+        content: commentText || "تعليق عام على المنشور",
+      },
+    ],
+    maxTokens: 200,
+  });
 
-return aiReply || fallback;
+  return aiReply || fallback;
+}
 }
 
 // ============================================================================
