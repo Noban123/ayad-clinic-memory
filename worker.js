@@ -1,5 +1,3 @@
-// Worker for Ayad Clinic messaging (fixed syntax, DB schema, OpenAI calls, utilities)
-
 const CLINIC_INFO = {
   projectName: 'Ayad Clinic AI',
   clinicName: 'Ayad Clinic',
