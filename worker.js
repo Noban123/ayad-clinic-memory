@@ -295,7 +295,7 @@ logError('processFacebookCommentEvent (inner)', err);
 توليد رد راقٍ على تعليق عام في فيسبوك (بدون طلب أي بيانات شخصية)
 */
 async function generateCommentReply(commentText, env) {
-const const fallback = `شكرًا لتواصلكم مع ${CLINIC_INFO.clinicName} 🌿
+const fallback = `شكرًا لتواصلكم مع ${CLINIC_INFO.clinicName} 🌿
 يسعدنا تواصلكم معنا عبر الرسائل الخاصة (Messenger) لمساعدتكم بكل التفاصيل التي تحتاجونها.`;
 
 const systemPrompt = buildCommentSystemPrompt();
